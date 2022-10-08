@@ -1,0 +1,25 @@
+
+{{/* Determine the correct context and scope */}}
+{{/* This allows for different logic depending on where the partial is called */}}
+{{ $context := . }}
+{{ $scope := default nil }}
+
+{{ if (reflect.IsMap . ) }}
+  {{ $context = .context }}
+  {{ $scope = cond (not .scope) nil .scope }}
+{{ end }}
+
+{{ with $context }}
+
+{{range .Params.tags }}
+<span class="flex">
+    <span
+      class="ltr:ml-1 rtl:mr-1 px-1 py-[1px] text-xs font-normal border rounded-md text-primary-700 dark:text-primary-400 border-primary-400 dark:border-primary-600"
+    >
+      {{.}}
+    </span>
+</span>
+
+{{end}}
+{{end}}
+  
