@@ -1,0 +1,46 @@
+{
+    "name": "dev",
+    "uuid": "04af0285-b6e2-4b82-bcf8-5d4939b20bb4",
+    "components": [
+        {
+            "name": "emrooz_blog",
+            "hash": "63cd669471cd4493aa0bdba1b45a51ba",
+            "resources": [
+                {
+                    "name": "emrooz_site",
+                    "ruuid": "cdev::simple::staticsite",
+                    "hash": "4987571ae58213432862a5fc429c7a98",
+                    "tags": {},
+                    "index_document": "index.html",
+                    "error_document": "error.html",
+                    "sync_folder": false,
+                    "content_folder": "public",
+                    "domain_name": "dev.emrooz.io",
+                    "ssl_certificate_arn": "arn:aws:acm:us-east-1:936870855874:certificate/3d6a85e0-7357-41f4-b782-a9990b26a06f"
+                }
+            ],
+            "references": [],
+            "cloud_output": {
+                "cdev::simple::staticsite;emrooz_site": {
+                    "cloud_id": "arn:aws:cloudfront::936870855874:distribution/EKCLCPIOHG7RF",
+                    "bucket_name": "dev.emrooz.io",
+                    "cloudfront_id": "EKCLCPIOHG7RF",
+                    "cloudfront_arn": "arn:aws:cloudfront::936870855874:distribution/EKCLCPIOHG7RF",
+                    "site_url": "d81qp76xa0xv3.cloudfront.net",
+                    "cloud_region": "us-east-1"
+                }
+            },
+            "previous_resolved_cloud_values": {
+                "cdev::simple::staticsite;emrooz_site": {}
+            },
+            "external_references": {}
+        }
+    ],
+    "component_name_to_uuid": {
+        "emrooz_blog": "a5629c18-d89e-4da6-b1f7-69c11220caa7"
+    },
+    "parent_uuid": null,
+    "children": [],
+    "resource_changes": {},
+    "failed_changes": {}
+}
